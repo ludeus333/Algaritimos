@@ -1,0 +1,28 @@
+def calcular_duracao_jogo(inicio, fim):
+    # Verifica se as entradas são válidas (0 a 23)
+    if not (0 <= inicio <= 23 and 0 <= fim <= 23):
+        return "Horas inválidas. Use valores entre 0 e 23."
+    
+    # Calcula a duração
+    if fim >= inicio:
+        duracao = fim - inicio
+    else:
+        # Se o jogo passou da meia-noite
+        duracao = (24 - inicio) + fim
+    
+    # Verifica se a duração excede o limite
+    if duracao > 24:
+        return "Duração excede o limite de 24 horas."
+    
+    return duracao
+
+# Entrada de dados
+try:
+    hora_inicio = int(input("Digite a hora de início (0-23): "))
+    hora_fim = int(input("Digite a hora de fim (0-23): "))
+    
+    # Calcula e exibe a duração
+    resultado = calcular_duracao_jogo(hora_inicio, hora_fim)
+    print(f"A duração do jogo foi de {resultado} horas.")
+except ValueError:
+    print("Por favor, digite apenas números inteiros.")
