@@ -1,0 +1,10 @@
+def calcular_voto
+ano_atual = float(input("Digite o ano atual:"))
+ano_nascimento = float(input('Digite o ano do seu nascimento:'))
+
+voto = (ano_atual - ano_nascimento)
+
+if voto >= 18:
+    print(f"Pode votar")
+else:
+    print(f"Não pode votar")
