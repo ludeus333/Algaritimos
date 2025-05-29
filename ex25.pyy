@@ -1,0 +1,10 @@
+qtd_atual = int(input("Quantidade atual em estoque: "))
+qtd_max = int(input("Quantidade máxima em estoque: "))
+qtd_min = int(input("Quantidade mínima em estoque: "))
+
+qtd_media = (qtd_max + qtd_min) / 2
+
+if qtd_atual >= qtd_media:
+    print("Não efetuar compra")
+else:
+    print("Efetuar compra")
